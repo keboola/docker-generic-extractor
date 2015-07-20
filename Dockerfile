@@ -9,4 +9,4 @@ RUN git clone https://github.com/keboola/generic-extractor.git ./
 RUN git checkout tags/0.0.1
 RUN composer install --no-interaction
 
-ENTRYPOINT php ./src/run.php --data=/data
+ENTRYPOINT php ./run.php --data=/data
