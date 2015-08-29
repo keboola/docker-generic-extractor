@@ -6,7 +6,7 @@ WORKDIR /home
 
 # Initialize
 RUN git clone https://github.com/keboola/generic-extractor.git ./
-RUN git checkout tags/0.0.14
+RUN git checkout tags/0.0.15
 RUN composer install --no-interaction
 
 ENTRYPOINT php ./run.php --data=/data
