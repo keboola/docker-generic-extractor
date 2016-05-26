@@ -1,5 +1,5 @@
-# VERSION 1.6.7
-FROM keboola/base-php56
+# VERSION 1.6.7.php7
+FROM quay.io/keboola/base-php70
 MAINTAINER Ondrej Vana <ondrej.vana@keboola.com>
 
 WORKDIR /home
