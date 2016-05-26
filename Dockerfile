@@ -1,5 +1,10 @@
-# VERSION 1.6.7.php7
-FROM quay.io/keboola/base-php70
+# VERSION 1.6.7.php7-official
+FROM php:7.0
+RUN apt-get update -q && apt-get install unzip git -y
+RUN cd \
+  && curl -sS https://getcomposer.org/installer | php \
+  && ln -s /root/composer.phar /usr/local/bin/composer
+
 MAINTAINER Ondrej Vana <ondrej.vana@keboola.com>
 
 WORKDIR /home
