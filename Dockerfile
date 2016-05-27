@@ -10,7 +10,7 @@ MAINTAINER Ondrej Vana <ondrej.vana@keboola.com>
 WORKDIR /home
 
 # Initialize
-RUN echo "memory_limit = -1" >> /etc/php.ini
+COPY php.ini /usr/local/etc/php/
 RUN git clone https://github.com/keboola/generic-extractor.git ./
 RUN git checkout tags/0.6.7
 RUN composer install --no-interaction
