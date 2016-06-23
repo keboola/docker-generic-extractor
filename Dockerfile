@@ -12,7 +12,7 @@ WORKDIR /home
 # Initialize
 COPY php.ini /usr/local/etc/php/
 RUN git clone https://github.com/keboola/generic-extractor.git ./
-RUN git checkout tags/0.6.12
+RUN git checkout tags/0.6.13
 RUN composer install --no-interaction --no-dev
 
 ENTRYPOINT php ./run.php --data=/data
