@@ -9,10 +9,10 @@ MAINTAINER Ondrej Vana <ondrej.vana@keboola.com>
 
 WORKDIR /home
 
-# Initialize 
+# Initialize
 COPY php.ini /usr/local/etc/php/
 RUN git clone https://github.com/keboola/generic-extractor.git ./
-RUN git checkout tags/0.6.17
+RUN git checkout tags/0.7.0
 RUN composer install --no-interaction --no-dev
 
 ENTRYPOINT php ./run.php --data=/data
